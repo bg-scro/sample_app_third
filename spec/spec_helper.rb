@@ -51,6 +51,9 @@ Spork.prefork do
     config.order = "random"
 
     config.include Capybara::DSL
+
+    # Added below myself, troubleshooting an 'undefined method 'patch'' message
+    config.include Rails.application.routes.url_helpers   
   end
 end
 
