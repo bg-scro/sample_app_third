@@ -28,5 +28,5 @@ SampleApp::Application.configure do
   config.assets.debug = true
 
   # I added this to attempt to fix a 'Missing host to link to' error message
-  #config.default_url_options = { host: "localhost:3000" }
+  #config.action_controller.default_url_options = { :host => "localhost:3000" }
 end

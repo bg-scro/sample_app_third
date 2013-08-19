@@ -36,4 +36,7 @@ SampleApp::Application.configure do
 
   # Speed up tests by lowering bcrypt's cost function from default setting.
   ActiveModel::SecurePassword.min_cost = true
+
+  # I added this to attempt to fix a 'Missing host to link to' error message
+  #config.action_controller.default_url_options = { :host => "localhost:3000" }
 end

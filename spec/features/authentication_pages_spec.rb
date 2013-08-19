@@ -74,7 +74,8 @@ describe "Authentication" do
 
       describe "submitting a PATCH request to the Users#update action" do
         before { patch user_path(wrong_user) }
-        specify { expect(response).to redirect_to(root_url) }
+        #  NOTE:  Rails Tutorial uses root_url below not root_path
+        specify { expect(response).to redirect_to(root_path) }
       end
     end
   end
